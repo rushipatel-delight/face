@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>signIn page</title>
+	<title>signin page</title>
 
 	<link rel="stylesheet" type="text/css" href="{% static 'signin.css' %}"/>
 
 </head>
 <body>
-<div id="main">
+<<!-- div id="main">
 	<header id="header">
 		<div id="welCome"> Welcome to the signip page</div>
 	</header>
@@ -27,6 +27,6 @@
 	
 	
 	
-</div>
+</div> -->
 </body>
 </html>
