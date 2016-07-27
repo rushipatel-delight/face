@@ -13,6 +13,6 @@ def log_check(request):
 	user = authenticate(username = username, password = password )
 	if user is not None:
 			login(request, user)
-			return HttpResponseRedirect('loggedin')
+			return HttpResponseRedirect('login_sucess')
 	else:
 				return HttpResponseRedirect ('invalid')
