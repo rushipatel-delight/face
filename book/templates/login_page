@@ -3,20 +3,19 @@
 <head>
 	<title>signin page</title>
 
-	<link rel="stylesheet" type="text/css" href="{% static 'signin.css' %}"/>
 
 </head>
 <body>
 <div id="main">
 	<header id="header">
-		<div id="welCome"> Welcome to the signip page</div>
+		<div id="welCome"> Welcome to the sign-in page</div>
 	</header>
 	<div id="detail" >
 	
 	{% if from.errors %}
 			<p>sorry. That's not a valid user</p>
 	{% endif %}
-	<form  method="post" action="{% url 'home' %}">{% csrf_token %}
+	<form  method="post" action="{% url 'check' %}">{% csrf_token %}
 			<label for="username"> user Name</label>
 			<input type="text" id="user" name="username" placeholder="username"></input>
 			<label for="password">password</label>

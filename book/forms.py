@@ -9,7 +9,7 @@ class Signup_user(UserCreationForm):
 		fields = ('username','email','password1','password2')
 	def save(self, commit=True):
 		user = super(Signup_user,self).save(commit=False)
-		user.emil = self.cleaned_data['email']
+		user.email = self.cleaned_data['email']
 
 		if commit:
 			user.save()
