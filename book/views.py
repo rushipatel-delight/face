@@ -23,3 +23,16 @@ def log_out(request):
 
 def invalid_user(request):
 	return render (request,'invalid_user_page.html')
+
+def user_signup(request):
+	if request.method == 'POST':
+		form = Register_user(request.POST)
+		if form.is_valid:
+			form.save()
+			return HttpResponseRedirect('signupsuccessfully')
+		else:
+			return HttpResponse('invalid data')
+
+	args={}
+	args['form']= Register_user()
+	return render (request,'user_signup.html',args)
